@@ -29,6 +29,4 @@ Using Twitter API for opinion mining and sentiment analysis.
 
 ## Authors
 
-Alexandra Benamar
-Mira Ait 
-Cristel Dos Santos Catarino
+Mira Ait Saada, Alexandra Benamar, Cristel Dos Santos Catarino, Joel Oscar Dossa
