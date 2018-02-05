@@ -7,10 +7,10 @@ from tweepy import OAuthHandler
 from tweepy import Stream
 
 #AUTHENTIFICATION KEYS
-access_token = "959197886314631168-W7zdSMzEucCG6RaSCeZqPl0YKPlLGJU"
-access_token_secret = "wNYKAZtsZroAiD17anXAqpXj9QjB3eJtPj2YNyzvclGkP"
-consumer_key = "UdQO7xkK2s2pgrjy5Vo1aqXkF"
-consumer_secret = "Pe49stN74VDzRaIdCaTp9cYZY4AH5qcvAUxmFMpNVXLD8FSuyH"
+access_token = "demandez moi ^^ "
+access_token_secret = "demandez moi ^^"
+consumer_key = "demandez moi ^^"
+consumer_secret = "demandez moi ^^"
 
 
 #MAIN PROG
