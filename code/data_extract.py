@@ -47,6 +47,6 @@ if __name__ == '__main__':
 
 		if tweets:
 			for elements in tweets:
-				print (elements.text)
+				print (elements)
 			maxid=tweets[-1].id #curseur pour ne pas recuperer les mêmes tweets
 			cpt +=len(tweets)
