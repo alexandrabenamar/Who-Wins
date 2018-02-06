@@ -1,0 +1,52 @@
+#### Ebauche de description du projet pour le 08/02 ####
+
+
+#Le projet dans sa globalité concerne la capacité des reseaux sociaux à predire des événements.
+
+#What's the problem
+
+	"""La plus part des analyses de prédictions d'événements
+		sont peu pertinante quand à leur résultats.
+
+	 Comment rendre l'analyse prédictive plus efficace ?"""
+
+#solutions we found/what we will use
+1-	"""
+	#Une première approche utilise l'enrichissement des données via "Linked Data".
+	
+	Deux étapes principales:
+		*Analyse theorique des données receuillis
+		*Enrichir les données en utilisant un reseau global de données structurés,
+		reliées entre elles disponible sur le web.
+	Décomposition des deux précédentes étapes en sous étapes
+	chaque sous étapes est étudié pour en déduire 
+	les métriques importantes qui pourraient affecter la precision de la prediction.
+
+	#voir doc -1-
+
+	"""
+2-	"""
+	#Deuxième approche, l'analyse des sentiments
+	
+	"""
+
+#the data form and where to get it
+"""We focus on Twiiter data because it's an huge database, widely used by people.(partagent leur opinions)
+We also assumes that we can use different database from different social media. According on what we want to make as prediction.
+photo ...->instagram
+marketing or art...->tumblr
+and more...
+
+#where to get the data:
+	Some API exists, but they are limited in time and in number of request they allow. The exemple of "tweepy".
+	One solution is using "http get" requests to  browse into Twiitter website. We found an algorithm which do the task.
+
+
+"""
+#What experiment we will do/What we'll meeasure ?
+
+
+#doc -1- http://www.jucs.org/jucs_23_3/on_predicting_election_results/jucs_23_03_0280_0303_kalampokis.pdf
+#doc -2- https://arxiv.org/ftp/arxiv/papers/1203/1203.1647.pdf
+
+
