@@ -29,12 +29,8 @@ class ParsJSon:
 
     def parsFile(self):
         compteur=0
-        name=""
-        nbrRT=0
-        text=""
         mentions=[]
         hashtags=[]
-        date=""
         with open(self.pathway) as in_file:
             for line in in_file:
                 if ("contributors" in line) and ("enabled" not in line):
@@ -70,7 +66,7 @@ class ParsJSon:
         return self.tweet_list
 
 if __name__ == "__main__":
-    json = ParsJSon("/Users/alexandrabenamar/Who-wins/dataset/example.json")
+    json = ParsJSon("/Users/alexandrabenamar/Who-wins/dataset/test.json")
     new_list = json.parsFile()
     for tweet in new_list:
         print tweet.__dict__
