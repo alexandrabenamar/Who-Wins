@@ -48,7 +48,7 @@ class pars_csv:
         return self.tweet_list
 
 if __name__ == "__main__":
-    csv_file = pars_csv("/Users/alexandrabenamar/Who-Wins/dataset/output_got.csv")
+    csv_file = pars_csv("/Users/alexandrabenamar/Who-Wins/dataset/dataset_nettoye.csv")
     new_list = csv_file.parsFile()
     for tweet in new_list:
         print tweet.__dict__
