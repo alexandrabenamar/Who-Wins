@@ -7,6 +7,8 @@ Using Twitter API for opinion mining and sentiment analysis.
 
 ### Prerequisites
 
+- Nettoyage du jeu de données au format csv en ligne de commande :
+  > cat fichier | sort | uniq 
 
 ### Installing
 
