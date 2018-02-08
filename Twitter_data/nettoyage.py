@@ -35,7 +35,7 @@ def cleaning(sentence):
         if ("@" in tmp_word) or ("#" in tmp_word):
             flag=1
             trash_words.append(tmp_word)                   # detection of "#" and "@" symbols
-        if flag == 1:                                      # detection of usernames and hashtags
+        elif flag == 1:                                      # detection of usernames and hashtags
             trash_words.append(tmp_word)
             flag = 0
         if ("RT" in tmp_word) or ("http" in tmp_word) or (".com/" in tmp_word):
@@ -60,6 +60,6 @@ def cleaning(sentence):
 
 
 if __name__ == "__main__":
-    sentence="@Mira RT: 1 the brexit will never ever pass or even be talked about, sorry guys, not gonna happen ! 3462892 http://www.google.fr #Brexit #Sortie2016"
+    sentence="@ Mira RT: 1 the brexit will never ever pass or even be talked about, sorry guys, not gonna happen ! 3462892 http://www.google.fr # Brexit # Sortie2016"
     sentence=cleaning(sentence)
     print sentence
