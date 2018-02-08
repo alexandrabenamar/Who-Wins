@@ -1,5 +1,6 @@
 #!/usr/bin/python
 #-*- coding: utf-8 -*-
+
 from tweet import *     # classe tweet
 import csv              # traitement des fichiers au format csv
 
