@@ -2,7 +2,7 @@
 #-*- coding: utf-8 -*-
 
 def cleaning(sentence):
-    """ Does different things :
+    """ Data cleansing :
         # Removal of usernames (marked by @ symbol)
         # Removal of hashtags (marked by # symbol)
         # Removal of hyperlinks (URLs)
@@ -51,11 +51,10 @@ def cleaning(sentence):
             end=string.index(" ")
 
     sentence+=" "
-    for word in trash_words:                                        # removal of everything that was detected
+    for word in trash_words:                               # removal of everything that was detected
         sentence=sentence.replace(word+" ","")
 
-    sentence=sentence.strip()                                       # removal of spaces before and after
-                                                                    # the sentence
+    sentence=sentence.strip()                              # removal of spaces before and after the sentence
     return sentence
 
 
