@@ -4,30 +4,17 @@ Using Twitter API for opinion mining and sentiment analysis.
 
 ## Getting Started
 
+### Dataset
 
-### Prerequisites
+- Download the dataset with Twitter API
 
 - Nettoyage du jeu de données au format csv en ligne de commande :
   > cat fichier | sort | uniq 
-
-### Installing
-
-
-## Running the tests
-
-
-### Break down into end to end tests
-
-
-### And coding style tests
-
-
-
-## Deployment
-
-
-## Built With
-
+ 
+ - Pré-traitement du texte contenus dans les tweets :
+    -> détection de la langue
+    -> suppression des mentions, des hashtags et des hyperliens
+    ->
 
 ## Authors
 

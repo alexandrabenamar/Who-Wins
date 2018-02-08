@@ -1,0 +1,2 @@
+https://www.cs.uic.edu/~liub/FBS/sentiment-analysis.html
+https://www.cs.uic.edu/~liub/FBS/sentiment-analysis.html#lexicon
