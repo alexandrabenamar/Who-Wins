@@ -1,0 +1,45 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Wed Feb  7 16:07:07 2018
+
+@author: root
+"""
+
+#fonction qui retourne un nombre positif s'il y a plus de mots positifs et un 
+#nombre négatif sinon.
+def positive_negative (sentence):
+
+    with open('/home/mira/projet_BDD/dictionnaires/opinion-lexicon-English/positive-words.txt', 
+              encoding = "ISO-8859-1" ) as f:
+        pos_words = f.read().splitlines()
+        
+    with open('/home/mira/projet_BDD/dictionnaires/opinion-lexicon-English/negative-words.txt', 
+              encoding = "ISO-8859-1" ) as f:
+        neg_words = f.read().splitlines()
+    
+    nb_pos=0;
+    nb_neg=0;
+    
+    #il y a beaucoup plus de mots négatifs que de mots positifs
+    #j'ai choisi de chercher si le mot est dans les mots positifs d'abord
+    
+    for i in sentence:
+        if i in pos_words:
+            nb_pos = nb_pos+1;
+            print (i)
+            continue
+        if i in neg_words:
+            nb_neg = nb_neg+1;
+            print (i)
+    
+    return nb_pos-nb_neg
+    
+    
+#test
+sentence = ["apples","are","good","for","health","but","bad","horrible","disgusting","in","flavor"]   
+print(positive_negative(sentence))
+
+
+
+
