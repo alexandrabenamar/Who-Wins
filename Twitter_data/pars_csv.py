@@ -1,8 +1,9 @@
 #!/usr/bin/python
 #-*- coding: utf-8 -*-
 
-from tweet import *     # classe tweet
-import csv              # traitement des fichiers au format csv
+from tweet import *
+from nettoyage import *
+import csv
 
 class pars_csv:
     """ Classe permettant de parser un fichier csv afin de
@@ -41,6 +42,7 @@ class pars_csv:
                                                             # les informations contenues sur la ligne
                 username=line['username']
                 text=line['text']
+                text=cleaning(text)
                 hashtags=line['hashtags']
                 retweets=line['retweets']
                 favorites=line['favorites']
@@ -57,7 +59,7 @@ class pars_csv:
 
 if __name__ == "__main__":
     # parser le fichier csv souhaite (le fichier doit avoir ete traite et nettoye au prealable)
-    csv_file = pars_csv("/Users/alexandrabenamar/Who-Wins/dataset/dataset_nettoye.csv")
+    csv_file = pars_csv("/Users/alexandrabenamar/Who-Wins/dataset/dataset_complet.csv")
     new_list = csv_file.parsFile()      # recuperation de la liste de tweets
     for tweet in new_list:
         print tweet.__dict__            # affichage de la liste de tweets
