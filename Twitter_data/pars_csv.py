@@ -35,7 +35,7 @@ class pars_csv:
         self.tweet_list = tweet_list
 
     def parsFile(self):
-        compteur=0
+
         with open(self.pathway) as f_obj:                   # ouverture du fichier csv
             reader = csv.DictReader(f_obj, delimiter=';')   # parser sous forme de dictionnaire le csv
             for line in reader:                             # récupération pour chaque tweets de toutes
@@ -51,9 +51,10 @@ class pars_csv:
                 geo=line['geo']
                 # création de l'objet tweet : new_tweet
                 new_tweet=Tweet(compteur, username, int(retweets)+int(favorites), text, hashtags, date, mentions)
-                compteur+=1
                 # ajout du tweet a la liste des tweets contenus dans le csv
-                self.tweet_list.append(new_tweet)
+                # uniquement si le tweet est en anglais
+                if (text != None):
+                    self.tweet_list.append(new_tweet)
         # retourner la liste des tweets contenus dans le csv
         return self.tweet_list
 
