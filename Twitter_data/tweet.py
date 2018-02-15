@@ -10,25 +10,25 @@ class Tweet:
     - le texte du Tweet
     - les hashtags associés au Tweet """
 
-    def __init__(self, id, username, nbrRT, text, hashtags, date, mentions):
+    def __init__(self, username, nbrRT, text, hashtags, date):#, id, mentions):
         """ Constructeur de notre classe """
-        self.id = id
+    #    self.id = id
         self.username = username
-        self.mentions = mentions
+    #    self.mentions = mentions
         self.nbrRT = nbrRT
         self.text = text
         self.hashtags = hashtags
         self.date = date
 
-    @property
-    def id(self):
-        """ getter identifiant"""
-        return self.id
+#    @property
+#    def id(self):
+#        """ getter identifiant"""
+#        return self.id
 
-    @id.setter
-    def id(self, uid):
-        """ setter identifiant"""
-        self.id = uid
+#    @id.setter
+#    def id(self, uid):
+#        """ setter identifiant"""
+#        self.id = uid
 
     @property
     def username(self):
@@ -40,15 +40,15 @@ class Tweet:
         """ setter nom de l'utilisateur """
         self.username = uname
 
-    @property
-    def mentions(self):
-        """ getter mentions """
-        return self.mentions
+#    @property
+#    def mentions(self):
+#        """ getter mentions """
+#        return self.mentions
 
-    @mentions.setter
-    def mentions(self, mentions):
-        """ setter nom de l'utilisateur"""
-        self.mentions = mentions
+#    @mentions.setter
+#    def mentions(self, mentions):
+#        """ setter nom de l'utilisateur"""
+#        self.mentions = mentions
 
     @property
     def nbrRT(self):
@@ -66,11 +66,11 @@ class Tweet:
         return self.date
 
     @date.setter
-    def date(self, d):
+    def date(self, date):
         """ setter nombre de retweets """
-        self.date=d
+        self.date=date
 
 if __name__ == "__main__":
     # test de creation d'un tweet
-    tweet = Tweet(0, "username", 234, "@Obama Time to vote ! #vote", "#vote", "21/01/2015", "@Obama")
+    tweet = Tweet("username", 234, "@Obama Time to vote ! #vote", "#vote", "21/01/2015",)#"@Obama")
     print tweet.__dict__
