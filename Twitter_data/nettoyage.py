@@ -14,6 +14,9 @@ def cleaning(sentence):
             https://github.com/Yoast/YoastSEO.js/blob/develop/src/config/stopwords.js
     """
 
+    if not check_language(sentence):
+        return None
+
     string=sentence
 
     spaces = string.count(" ")
@@ -50,8 +53,9 @@ def cleaning(sentence):
         sentence=sentence.replace(word+" ","")
 
     sentence=sentence.strip()                              # removal of spaces before and after the sentence
-    if not check_language(sentence):
-        return None
+
+    ponct = [",",".","?","!","[","]","(",")","{","}"]
+    sentence = ''.join([i if i not in ponct else "" for i in sentence])
 
     return sentence
 
