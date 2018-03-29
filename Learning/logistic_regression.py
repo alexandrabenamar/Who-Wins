@@ -34,3 +34,6 @@ def logisticRegression(datafile):
     # Save and load model
     model.save(sc, "target/tmp/pythonLogisticRegressionWithLBFGSModel")
     sameModel = LogisticRegressionModel.load(sc,"target/tmp/pythonLogisticRegressionWithLBFGSModel")
+
+if __name__ == "__main__":
+    

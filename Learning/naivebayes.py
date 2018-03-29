@@ -1,3 +1,7 @@
+#!/usr/bin/env python3
+#-*- coding: utf-8 -*-
+
+from pyspark import SparkContext
 from pyspark.mllib.classification import NaiveBayes, NaiveBayesModel
 from pyspark.mllib.util import MLUtils
 
@@ -9,6 +13,8 @@ def NaiveBayes(datafile):
         Apache Spark API for Naive Bayes Implementation :
             https://spark.apache.org/docs/latest/mllib-naive-bayes.html
     """
+
+    sc = SparkContext(appName="PythonNaiveBayesExample")
 
     # Load and parse the data file.
     data = MLUtils.loadLibSVMFile(sc, datafile)
@@ -25,10 +31,13 @@ def NaiveBayes(datafile):
     print('model accuracy {}'.format(accuracy))
 
     # Save and load model
-    output_dir = 'target/tmp/myNaiveBayesModel'
+    output_dir = '/Users/alexandrabenamar/Who-Wins/myNaiveBayesModel'
     shutil.rmtree(output_dir, ignore_errors=True)
     model.save(sc, output_dir)
     sameModel = NaiveBayesModel.load(sc, output_dir)
     predictionAndLabel = test.map(lambda p: (sameModel.predict(p.features), p.label))
     accuracy = 1.0 * predictionAndLabel.filter(lambda pl: pl[0] == pl[1]).count() / test.count()
     print('sameModel accuracy {}'.format(accuracy))
+
+if __name__ == "__main__":
+    NaiveBayes("/Users/alexandrabenamar/Who-Wins/Learning/training.txt")
