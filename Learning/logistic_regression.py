@@ -1,11 +1,9 @@
-
-
 from pyspark.mllib.classification import LogisticRegressionWithLBFGS, LogisticRegressionModel
 from pyspark.mllib.regression import LabeledPoint
 
 def parsePoint(line):
     """
-        Load and parse the data
+        Load and parse the data.
 
         Source :
             https://spark.apache.org/docs/latest/mllib-linear-methods.html#classification
