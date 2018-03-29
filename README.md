@@ -8,7 +8,7 @@ Using Twitter API for opinion mining and sentiment analysis.
 
 #### How to install
 
-Shell Command line :
+Shell command line:
   > pip3 install <library>
   
 
