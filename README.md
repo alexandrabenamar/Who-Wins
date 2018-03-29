@@ -26,7 +26,7 @@ Using Twitter API for opinion mining and sentiment analysis.
 ## Machine Learning
 
 - Naive Bayes
-
+- Logistic Regression
 
 
 ## Authors
