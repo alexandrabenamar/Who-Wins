@@ -13,7 +13,7 @@ Programming language : Python 3.6.5
 #### How to install
 
 Shell command line:
-  > pip3 install <library>
+  > pip3 install < library >
   
 #### Must have
 
