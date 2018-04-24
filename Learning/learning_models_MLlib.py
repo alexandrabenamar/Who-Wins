@@ -77,10 +77,13 @@ if __name__ == "__main__" :
     
     
     model_bayes = NaiveBayes.train(training)
+    model_bayes.save(sc, "bayes_model_mira.model")
     #save bayes_model
     model_decision_tree_entropy = DecisionTree.trainClassifier(training, categoricalFeaturesInfo={}, impurity="entropy", maxDepth=5, numClasses=2)
+    model_decision_tree_entropy.save(sc, "DT_entropy_model_mira.model")
     #save TR_entropy_model
     model_decision_tree_gini = DecisionTree.trainClassifier(training, categoricalFeaturesInfo={}, impurity="gini", maxDepth=5, numClasses=2)
+    model_decision_tree_gini.save(sc, "DT_gini_model_mira.model")
     #save TR_gini_model
     
 
