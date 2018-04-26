@@ -47,21 +47,21 @@ if __name__ == "__main__" :
     
     sc = SparkContext(conf = conf)
     
-    file = open("resultat_MLlib.txt","a")
+    file = open("resultat_learning.txt","a")
     file.write("\n\n\n\n*******************************************************\n")
     
     
     ###########################################################################
     #########                 Training and Test Set                   #########
     
-    pos_file = "data/training_positif_clean.csv"
-    neg_file = "data/training_negatif_clean.csv"
+    pos_file = "/home/mira/TAF/projet_BDD/code_BDD/test_petit_jeu_de_donnees/data/training_positif_clean.csv"
+    neg_file = "/home/mira/TAF/projet_BDD/code_BDD/test_petit_jeu_de_donnees/data/training_negatif_clean.csv"
     
     training_idf = training_set(pos_file, neg_file)
     training = training_idf[0]
     idf = training_idf[1]
     
-    test_file = "data/test_clean" + ".csv"
+    test_file = "/home/mira/TAF/projet_BDD/code_BDD/test_petit_jeu_de_donnees/data/test_clean" + ".csv"
     test = test_set(test_file, idf)
     
     print("\nDone : Tf-IDF training and test sets")
@@ -99,8 +99,8 @@ if __name__ == "__main__" :
     
     print("\n========= Test on Brexit labeled data ========= ")
     
-    text_negative_brexit = sc.textFile("data/brexit_negatif_clean.csv")
-    text_positive_brexit = sc.textFile("data/brexit_positif_clean.csv")
+    text_negative_brexit = sc.textFile("/home/mira/TAF/projet_BDD/code_BDD/test_petit_jeu_de_donnees/data/brexit_negatif_clean.csv")
+    text_positive_brexit = sc.textFile("/home/mira/TAF/projet_BDD/code_BDD/test_petit_jeu_de_donnees/data/brexit_positif_clean.csv")
 
     test_text_brexit = text_negative_brexit.union(text_positive_brexit)
     test_tlabels_brexit = text_negative_brexit.map(lambda x: 0.0).union(text_positive_brexit.map(lambda x: 1.0))
