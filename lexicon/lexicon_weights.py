@@ -12,21 +12,15 @@ import pandas as pd
 
 #fonction qui retourne la somme des poids selon le dico pondéré
 def weight_positive_negative (sentence):
-    df = pd.read_table("documents/senticnet4.txt", header=None);
+    df = pd.read_table("senticnet4.txt", header=None);
     
     lexicon = df.iloc[: , [0,2]]
     
     pos_neg=0
     
     for i in sentence:
-        print(i)
         weight=lexicon.loc[(lexicon[0] == i)][2].tolist()
         if len(weight)>0:
             pos_neg=pos_neg + weight[0]
     return pos_neg
-        
-
-#test
-sentence = ["apples","are","good","for","health","but","bad","in","flavor"]
-print(weight_positive_negative(sentence))
 
