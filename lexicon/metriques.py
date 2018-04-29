@@ -73,11 +73,11 @@ def calcul_metriques(inital_file, file_to_csv):
 
 	output.close()
 
-def to_csv(to_csv,csv):
+def to_csv(to_csv,csv_f):
 
 	with open(to_csv, "r") as in_text:
 	    in_reader = csv.reader(in_text, delimiter = '|')
-	    with open(csv, "w") as out_csv:
+	    with open(csv_f, "w") as out_csv:
 	        out_writer = csv.writer(out_csv, newline='')
 	        for row in in_reader:
 	            out_writer.writerow(row)
@@ -102,7 +102,7 @@ if __name__ == '__main__':
 
 		f=open(TIME_F,"w")
 		start = time.time()
-		calcul_metriques(sys.argv[1], TO_CSV_F)
+		#calcul_metriques(sys.argv[1], TO_CSV_F)
 		to_csv(TO_CSV_F, CSV_F)
 		f.write("time1: "+str(time.time()-start)+"s")
 
