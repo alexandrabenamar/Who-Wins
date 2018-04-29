@@ -78,7 +78,7 @@ def to_csv(to_csv,csv_f):
 	with open(to_csv, "r") as in_text:
 	    in_reader = csv.reader(in_text, delimiter = '|')
 	    with open(csv_f, "w") as out_csv:
-	        out_writer = csv.writer(out_csv, newline='')
+	        out_writer = csv.writer(out_csv, lineterminator='\n', dialect='excel', delimiter=';')
 	        for row in in_reader:
 	            out_writer.writerow(row)
 
