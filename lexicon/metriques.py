@@ -7,9 +7,8 @@ import time
 #Use this script with the following command
 #python3 metriques.py FILE-NAME.csv
 """
-Ce script impléméente les 4 méthodes permettant d'extraire le sentiment
-d'un tweet.
-Les résultats sont retournés dans les fichiers "results1.txt" et "output_end.csv"
+Ce script implémente les 4 méthodes permettant d'extraire le sentiment d'un tweet.
+Les résultats sont retournés dans les fichiers "results1.txt" et "output_end.csv".
 """
 
 """
