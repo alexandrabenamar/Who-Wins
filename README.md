@@ -18,8 +18,12 @@ Using Twitter API for opinion mining and sentiment analysis.
 
 #### How to install
 
-Shell command line:
+With pip :
   > pip3 install <library>
+  
+With homebrew :
+  > brew update
+  > brew install <library>
 
 ##### Polyglot
 
