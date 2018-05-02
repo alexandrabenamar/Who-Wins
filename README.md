@@ -28,15 +28,15 @@ With homebrew :
 ##### Polyglot
 
 Shell command line:
-  > sudo apt-get install python-numpy libicu-dev
+  > `sudo apt-get install python-numpy libicu-dev`
 
 ### Dataset
 
 - Download the dataset with Twitter API
 
 - Data cleansing (.csv format):
-  > cat fichier | sort | uniq
-
+  > `cat fichier | sort | uniq`
+  
 ## Machine Learning
 
 - Naive Bayes
