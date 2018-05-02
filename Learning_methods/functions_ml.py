@@ -76,7 +76,7 @@ def model_predict(model, test_df):
     return(num_pos, num_neg)
     
 
-def write_result(num_pos, num_neg, accuracy, name, file = open("resultat_learning.txt","a")):
+def write_result(num_pos, num_neg, accuracy, f1, name, file = open("resultat_learning.txt","a")):
     
     file.write("\n\n\n\n*******************************************************\n")
     
@@ -86,18 +86,24 @@ def write_result(num_pos, num_neg, accuracy, name, file = open("resultat_learnin
     
     file.write("\n" + "== Results on labeled data (Brexit) ==" + "\n")
     file.write('\n-> Accuracy '+name+' : ' + str(accuracy) + '\n')
+    file.write('\n-> F_measure '+name+' : ' + str(f1) + '\n')
     
     file.close()
-
+    
 
 def test_with_accuracy(test_df, model):
     
     result = model.transform(test_df)
     
     predictionAndLabels = result.select("prediction", "label")
-    evaluator = MulticlassClassificationEvaluator(metricName="accuracy")
-    accuracy = evaluator.evaluate(predictionAndLabels)
-    return accuracy
+    accuracy_evaluator = MulticlassClassificationEvaluator(metricName="accuracy")
+    accuracy = accuracy_evaluator.evaluate(predictionAndLabels)
+    
+    f1_evaluator = MulticlassClassificationEvaluator(metricName="f1")
+    f1 = f1_evaluator.evaluate(predictionAndLabels)
+    
+    return (accuracy , f1)
+    
 
 def brexit_labeled_data(sc, numFeatures, idfModel, model):
     
@@ -118,9 +124,9 @@ def brexit_labeled_data(sc, numFeatures, idfModel, model):
     rescaledData_test_brexit = idfModel.transform(featurizedData_test_brexit)
     rescaled_test_df_brexit = rescaledData_test_brexit.select("features" , "label")
     
-    accuracy = test_with_accuracy(rescaled_test_df_brexit, model)
+    (accuracy, f1) = test_with_accuracy(rescaled_test_df_brexit, model)
     
-    return accuracy
+    return (accuracy, f1)
 
 
 

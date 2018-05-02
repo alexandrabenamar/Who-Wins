@@ -1,0 +1,236 @@
+
+
+
+
+*******************************************************
+================ Neural Network ============== 
+
+- Positive : 5
+- Negative : 5
+
+== Results on labeled data (Brexit) ==
+
+-> Accuracy Neural Network : 0.5
+
+-> F_measure Neural Network : 0.4505494505494506
+
+
+
+
+*******************************************************
+
+
+================== DECISION TREE (gini) =============== 
+
+- Positive : 7
+- Negative : 3
+
+
+
+
+*******************************************************
+================ Naïve Bayes ============== 
+
+- Positive : 9
+- Negative : 1
+
+== Results on labeled data (Brexit) ==
+
+-> Accuracy Naïve Bayes : 1.0
+
+-> F_measure Naïve Bayes : 1.0
+
+
+
+
+*******************************************************
+================ Naïve Bayes ============== 
+
+- Positive : 9
+- Negative : 1
+
+== Results on labeled data (Brexit) ==
+
+-> Accuracy Naïve Bayes : 1.0
+
+-> F_measure Naïve Bayes : 1.0
+
+
+
+
+*******************************************************
+================ Naïve Bayes ============== 
+
+- Positive : 9
+- Negative : 1
+
+== Results on labeled data (Brexit) ==
+
+-> Accuracy Naïve Bayes : 0.5
+
+-> F_measure Naïve Bayes : 0.6666666666666666
+
+
+
+
+*******************************************************
+================ Naïve Bayes ============== 
+
+- Positive : 9
+- Negative : 1
+
+== Results on labeled data (Brexit) ==
+
+-> Accuracy Naïve Bayes : 0.5
+
+-> F_measure Naïve Bayes : 0.6666666666666666
+
+
+
+
+*******************************************************
+================ Naïve Bayes ============== 
+
+- Positive : 9
+- Negative : 1
+
+== Results on labeled data (Brexit) ==
+
+-> Accuracy Naïve Bayes : 0.5
+
+-> F_measure Naïve Bayes : 0.6666666666666666
+
+
+
+
+*******************************************************
+================ Naïve Bayes ============== 
+
+- Positive : 9
+- Negative : 1
+
+== Results on labeled data (Brexit) ==
+
+-> Accuracy Naïve Bayes : 0.5
+
+-> F_measure Naïve Bayes : 0.6666666666666666
+
+
+
+
+*******************************************************
+================ Naïve Bayes ============== 
+
+- Positive : 9
+- Negative : 1
+
+== Results on labeled data (Brexit) ==
+
+-> Accuracy Naïve Bayes : 0.5
+
+-> F_measure Naïve Bayes : 0.3333333333333333
+
+
+
+
+*******************************************************
+================ Naïve Bayes ============== 
+
+- Positive : 9
+- Negative : 1
+
+== Results on labeled data (Brexit) ==
+
+-> Accuracy Naïve Bayes : 0.5
+
+-> F_measure Naïve Bayes : 0.3333333333333333
+
+
+
+
+*******************************************************
+================ Naïve Bayes ============== 
+
+- Positive : 9
+- Negative : 1
+
+== Results on labeled data (Brexit) ==
+
+-> Accuracy Naïve Bayes : 0.0
+
+-> F_measure Naïve Bayes : 0.0
+
+
+
+
+*******************************************************
+================ Naïve Bayes ============== 
+
+- Positive : 9
+- Negative : 1
+
+== Results on labeled data (Brexit) ==
+
+-> Accuracy Naïve Bayes : 0.5
+
+-> F_measure Naïve Bayes : 0.3333333333333333
+
+
+
+
+*******************************************************
+================ Naïve Bayes ============== 
+
+- Positive : 9
+- Negative : 1
+
+== Results on labeled data (Brexit) ==
+
+-> Accuracy Naïve Bayes : 0.6116027531956736
+
+-> F_measure Naïve Bayes : 0.4961020929224242
+
+
+
+
+*******************************************************
+================ Naïve Bayes ============== 
+
+- Positive : 9
+- Negative : 1
+
+== Results on labeled data (Brexit) ==
+
+-> Accuracy Naïve Bayes : 0.6116027531956736
+
+-> F_measure Naïve Bayes : 0.4961020929224242
+
+
+
+
+*******************************************************
+================ Naïve Bayes ============== 
+
+- Positive : 9
+- Negative : 1
+
+== Results on labeled data (Brexit) ==
+
+-> Accuracy Naïve Bayes : 0.6116027531956736
+
+-> F_measure Naïve Bayes : 0.4961020929224242
+
+
+
+
+*******************************************************
+================ LinearSVC ============== 
+
+- Positive : 1
+- Negative : 1
+
+== Results on labeled data (Brexit) ==
+
+-> Accuracy LinearSVC : 0.5
+
+-> F_measure LinearSVC : 0.4505494505494506

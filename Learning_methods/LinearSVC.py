@@ -27,16 +27,16 @@ if __name__ == "__main__":
     
     (rescaledData, idfModel) = training_set(sc = sc, numFeatures = numFeatures)
     model = SVC_train(training = rescaledData)
-    
+
     print("Test... \n")
 
-    rescaled_test_df = test_set(sc, numFeatures = numFeatures, idfModel = idfModel)
-    (num_pos, num_neg) = model_predict(model, rescaled_test_df)
+#    rescaled_test_df = test_set(sc, numFeatures = numFeatures, idfModel = idfModel)
+#    (num_pos, num_neg) = model_predict(model, rescaled_test_df)
     
     print("Test on Brexit labeled data...\n")
     
-    accuracy = brexit_labeled_data(sc = sc, numFeatures = numFeatures, idfModel = idfModel , model = model)
+    (accuracy, f1) = brexit_labeled_data(sc = sc, numFeatures = numFeatures, idfModel = idfModel , model = model)
    
     print("Saving results...\n")
     
-    write_result(num_pos, num_neg, accuracy = accuracy , name = "Linear SVC")
+    write_result(1, 1, accuracy = accuracy, f1 = f1, name = "LinearSVC")
