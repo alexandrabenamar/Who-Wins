@@ -5,20 +5,14 @@ Created on Tue Apr 24 23:41:07 2018
 
 @author: mira
 """
-
-from pyspark.ml.classification import MultilayerPerceptronClassifier
+from pyspark.ml.classification import LinearSVC
 from functions_ml import spark_context, training_set, test_set, write_result, brexit_labeled_data, model_predict
 
 
-def MLP_train(training):
-    print("ici")
+def SVC_train(training):
     
-    num_cols = rescaledData.select('features').collect()[0].features.size  #vocabulary size
-    layers = [num_cols , 100 , 2]
-    MLP_trainer = MultilayerPerceptronClassifier(maxIter=100, layers=layers, blockSize=128, seed=1234)
-    model = MLP_trainer.fit(training)
-    
-    print("ici")
+    trainer_SVC = LinearSVC(maxIter=10, regParam=0.1)
+    model = trainer_SVC.fit(rescaledData)
     
     return model
 
@@ -33,7 +27,7 @@ if __name__ == "__main__":
     (rescaledData, idfModel) = training_set(sc = sc, numFeatures = numFeatures)
     print(33333333333333333333333333333333333333333333)
 
-    model = MLP_train(training = rescaledData)
+    model = SVC_train(training = rescaledData)
 
     print("Test... \n")
 
