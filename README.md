@@ -6,6 +6,14 @@ Using Twitter API for opinion mining and sentiment analysis.
 
 ### Libraries
 
+- pandas
+- numpy
+- polyglot
+
+### Dependencies
+
+- sudo apt-get install python-numpy libicu-dev
+
 #### How to install
 
 Shell command line:
