@@ -1,12 +1,11 @@
 import sys
 import time
 #use this script with the following command
-# python3 classification.py YOUR-FILE
+# python3 classification.py YOUR-FILE.txt
 """
-Le script retourne le temps d'exécution dans le fichier
-time.classification.txt
-Le resultat de la classification est dans le fichier
-classification.txt
+Le script prend un fichier .txt dont les éléments sont séparés par le caractère "|"
+Le script retourne le temps d'exécution dans le fichier time.classification.txt
+Le resultat de la classification est dans le fichier classification.txt
 """
 def classer(fichier):
 
