@@ -6,23 +6,34 @@ from pyspark.ml.evaluation import MulticlassClassificationEvaluator
 from pyspark.sql import SparkSession
 from pyspark.ml.feature import HashingTF, IDF, Tokenizer
 
+"""
+    The file contains functions used by ml Supervised Learning programs
+    Spark implementation of :
+        Training phase
+        Test phase
+        Evaluation phase
+"""
 
 def spark_context():
     
     conf = SparkConf().setAppName('sentiment-analysis').setMaster('local[*]')
-    
     sc = SparkContext(conf = conf)
-    
     SparkSession.builder.appName("sentiment-analysis").getOrCreate()    
         
     return sc
 
 def training_set(sc,
                  numFeatures,
-                 pos_file = "data/training_positif_clean.csv",
-                 neg_file = "data/training_negatif_clean.csv"
+                 pos_file = "/home/mira/TAF/projet_BDD/code_BDD/test_petit_jeu_de_donnees/data/training_positif_clean.csv",
+                 neg_file = "/home/mira/TAF/projet_BDD/code_BDD/test_petit_jeu_de_donnees/data/training_negatif_clean.csv"
                  ):
-    
+    """
+        Input : 
+            number of retained features in the tweet-term structure
+        Output : 
+            normalized tweet-term format training set
+            IDF model (that will be used in the test phase)
+    """
     
     text_positive = sc.textFile(pos_file)
     text_negative = sc.textFile(neg_file)
@@ -50,11 +61,18 @@ def training_set(sc,
 def test_set(sc,
              idfModel,
              numFeatures,
-             test_file = "data/test_clean.csv"
+             test_file = "/home/mira/TAF/projet_BDD/code_BDD/test_petit_jeu_de_donnees/data/test_clean.csv"
              ):
+    """
+        Input : 
+            IDF model obtained in the training phase
+            number of retained features in the tweet-term structure
+        Output : 
+            normalized tweet-term format test set            
+    """
     
     test_text = sc.textFile(test_file)
-    test_df = test_text.map(lambda x : (0,x)).toDF(["nothing" , "sentence"]) #(0,x) = bricolage
+    test_df = test_text.map(lambda x : (0,x)).toDF(["nothing" , "sentence"]) 
     
     tokenizer_test = Tokenizer(inputCol="sentence", outputCol="words")
     wordsData_test = tokenizer_test.transform(test_df)
@@ -68,6 +86,14 @@ def test_set(sc,
 
 
 def model_predict(model, test_df):
+    """
+        Input : 
+            training model obtained in the training phase
+            normalized tweet-term format test set
+        Output :
+            prediction couple : (number of positive tweets , number of negative tweets)
+        
+    """
     
     predictions = model.transform(test_df)
     num_pos = predictions.select("prediction").rdd.map(lambda x : x["prediction"]).countByValue()[1.0]
@@ -77,6 +103,9 @@ def model_predict(model, test_df):
     
 
 def write_result(num_pos, num_neg, accuracy, f1, name, file = open("resultat_learning.txt","a")):
+    """
+        Save results in a common file
+    """
     
     file.write("\n\n\n\n*******************************************************\n")
     
@@ -92,6 +121,13 @@ def write_result(num_pos, num_neg, accuracy, f1, name, file = open("resultat_lea
     
 
 def test_with_accuracy(test_df, model):
+    """
+        Input :
+             normalized tweet-term format test set with a "label" column
+             training model obtained in the training phase
+        Output : 
+             performance couple : (accuracy , F-measure)
+    """
     
     result = model.transform(test_df)
     
@@ -106,9 +142,17 @@ def test_with_accuracy(test_df, model):
     
 
 def brexit_labeled_data(sc, numFeatures, idfModel, model):
+    """
+        Input : 
+            number of retained features in the tweet-term structure
+            IDF model obtained in the training phase
+            training model obtained in the training phase
+        Output :
+            performance couple : (accuracy , F-measure)
+    """
     
-    brexit_positive = sc.textFile("data/brexit_positif_clean.csv")
-    brexit_negative = sc.textFile("data/brexit_negatif_clean.csv")
+    brexit_positive = sc.textFile("/home/mira/TAF/projet_BDD/code_BDD/test_petit_jeu_de_donnees/data/brexit_positif_clean.csv")
+    brexit_negative = sc.textFile("/home/mira/TAF/projet_BDD/code_BDD/test_petit_jeu_de_donnees/data/brexit_negatif_clean.csv")
     
     pos_labels_brexit = brexit_positive.map(lambda x : 1.0).zip(brexit_positive.map(lambda x : x))
     neg_labels_brexit = brexit_negative.map(lambda x : 0.0).zip(brexit_negative.map(lambda x : x))

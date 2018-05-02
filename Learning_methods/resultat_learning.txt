@@ -234,3 +234,108 @@
 -> Accuracy LinearSVC : 0.5
 
 -> F_measure LinearSVC : 0.4505494505494506
+
+
+
+
+*******************************************************
+================ Decision Tree (Entropy) ============== 
+
+- Positive : 7
+- Negative : 3
+
+== Results on labeled data (Brexit) ==
+
+-> Accuracy Decision Tree (Entropy) : 0.45
+
+-> F_measure Decision Tree (Entropy) : 0.41333333333333333
+
+
+
+
+*******************************************************
+================ LinearSVC ============== 
+
+- Positive : 6
+- Negative : 4
+
+== Results on labeled data (Brexit) ==
+
+-> Accuracy LinearSVC : 0.5
+
+-> F_measure LinearSVC : 0.4505494505494506
+
+
+
+
+*******************************************************
+================ Naïve Bayes ============== 
+
+- Positive : 9
+- Negative : 1
+
+== Results on labeled data (Brexit) ==
+
+-> Accuracy Naïve Bayes : 0.5
+
+-> F_measure Naïve Bayes : 0.3333333333333333
+
+
+
+
+*******************************************************
+================ Decision Tree (Gini) ============== 
+
+- Positive : 7
+- Negative : 3
+
+== Results on labeled data (Brexit) ==
+
+-> Accuracy Decision Tree (Gini) : 0.45
+
+-> F_measure Decision Tree (Gini) : 0.41333333333333333
+
+
+
+
+*******************************************************
+================ Logistic Regression ============== 
+
+- Positive : 7
+- Negative : 3
+
+== Results on labeled data (Brexit) ==
+
+-> Accuracy Logistic Regression : 0.6
+
+-> F_measure Logistic Regression : 0.5833333333333333
+
+
+
+
+*******************************************************
+================ Neural Network ============== 
+
+- Positive : 5
+- Negative : 5
+
+== Results on labeled data (Brexit) ==
+
+-> Accuracy Neural Network : 0.5
+
+-> F_measure Neural Network : 0.4505494505494506
+
+
+
+
+*******************************************************
+================ Decision Tree (Entropy) ============== 
+
+- Positive : 7
+- Negative : 3
+
+== Results on labeled data (Brexit) ==
+
+-> Accuracy Decision Tree (Entropy) : 0.45
+
+-> F_measure Decision Tree (Entropy) : 0.41333333333333333

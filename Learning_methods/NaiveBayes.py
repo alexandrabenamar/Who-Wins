@@ -19,8 +19,8 @@ if __name__ == "__main__" :
     
     print("Test... \n")
     
-#    test = test_set(sc, numFeatures = numFeatures, idf = idf)
-#    (num_pos, num_neg) = mode_predict(model, test)
+    test = test_set(sc, numFeatures = numFeatures, idf = idf)
+    (num_pos, num_neg) = mode_predict(model, test)
     
     print("Test on Brexit labeled data...\n")
     
@@ -28,4 +28,4 @@ if __name__ == "__main__" :
 
     print("Saving results...")
     
-    write_result(1, 1, accuracy = accuracy, f1 = f1, name = "Naïve Bayes")
+    write_result(num_pos, num_neg, accuracy = accuracy, f1 = f1, name = "Naïve Bayes")
