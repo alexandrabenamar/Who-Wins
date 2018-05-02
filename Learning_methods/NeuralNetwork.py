@@ -31,7 +31,8 @@ if __name__ == "__main__":
     print("Training...\n")
     
     (rescaledData, idfModel) = training_set(sc = sc, numFeatures = numFeatures)
-    print(3)
+    print(33333333333333333333333333333333333333333333)
+
     model = MLP_train(training = rescaledData)
 
     print("Test... \n")
