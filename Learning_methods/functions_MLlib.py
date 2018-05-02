@@ -34,8 +34,8 @@ def spark_context():
 
 def training_set(sc,
                  numFeatures,
-                 pos_file = "/home/mira/TAF/projet_BDD/code_BDD/test_petit_jeu_de_donnees/data/training_positif_clean.csv",
-                 neg_file = "/home/mira/TAF/projet_BDD/code_BDD/test_petit_jeu_de_donnees/data/training_negatif_clean.csv"
+                 pos_file = "data/training_positif_clean.csv",
+                 neg_file = "data/training_negatif_clean.csv"
                  ):
     """
         Input : number of retained features in the tweet-term structure
@@ -62,7 +62,7 @@ def training_set(sc,
 def test_set(sc,
              numFeatures,
              idf,
-             test_file = "/home/mira/TAF/projet_BDD/code_BDD/test_petit_jeu_de_donnees/data/test_clean.csv"
+             test_file = "data/test_clean.csv"
              ):
     """
         Input : 
@@ -126,8 +126,8 @@ def brexit_labeled_data(sc, model, numFeatures, idf):
             performance couple : (accuracy , F-measure)
     """
     
-    text_negative_brexit = sc.textFile("/home/mira/TAF/projet_BDD/code_BDD/test_petit_jeu_de_donnees/data/brexit_negatif_clean.csv")
-    text_positive_brexit = sc.textFile("/home/mira/TAF/projet_BDD/code_BDD/test_petit_jeu_de_donnees/data/brexit_positif_clean.csv")
+    text_negative_brexit = sc.textFile("data/brexit_negatif_clean.csv")
+    text_positive_brexit = sc.textFile("data/brexit_positif_clean.csv")
 
     test_text_brexit = text_negative_brexit.union(text_positive_brexit)
     test_labels_brexit = text_negative_brexit.map(lambda x: 0.0).union(text_positive_brexit.map(lambda x: 1.0))

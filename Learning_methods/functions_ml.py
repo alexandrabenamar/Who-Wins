@@ -24,8 +24,8 @@ def spark_context():
 
 def training_set(sc,
                  numFeatures,
-                 pos_file = "/home/mira/TAF/projet_BDD/code_BDD/test_petit_jeu_de_donnees/data/training_positif_clean.csv",
-                 neg_file = "/home/mira/TAF/projet_BDD/code_BDD/test_petit_jeu_de_donnees/data/training_negatif_clean.csv"
+                 pos_file = "data/training_positif_clean.csv",
+                 neg_file = "data/training_negatif_clean.csv"
                  ):
     """
         Input : 
@@ -61,7 +61,7 @@ def training_set(sc,
 def test_set(sc,
              idfModel,
              numFeatures,
-             test_file = "/home/mira/TAF/projet_BDD/code_BDD/test_petit_jeu_de_donnees/data/test_clean.csv"
+             test_file = "data/test_clean.csv"
              ):
     """
         Input : 
@@ -151,8 +151,8 @@ def brexit_labeled_data(sc, numFeatures, idfModel, model):
             performance couple : (accuracy , F-measure)
     """
     
-    brexit_positive = sc.textFile("/home/mira/TAF/projet_BDD/code_BDD/test_petit_jeu_de_donnees/data/brexit_positif_clean.csv")
-    brexit_negative = sc.textFile("/home/mira/TAF/projet_BDD/code_BDD/test_petit_jeu_de_donnees/data/brexit_negatif_clean.csv")
+    brexit_positive = sc.textFile("data/brexit_positif_clean.csv")
+    brexit_negative = sc.textFile("data/brexit_negatif_clean.csv")
     
     pos_labels_brexit = brexit_positive.map(lambda x : 1.0).zip(brexit_positive.map(lambda x : x))
     neg_labels_brexit = brexit_negative.map(lambda x : 0.0).zip(brexit_negative.map(lambda x : x))
