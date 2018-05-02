@@ -11,11 +11,14 @@ from functions_ml import spark_context, training_set, test_set, write_result, br
 
 
 def MLP_train(training):
+    print("ici")
     
     num_cols = rescaledData.select('features').collect()[0].features.size  #vocabulary size
     layers = [num_cols , 100 , 2]
     MLP_trainer = MultilayerPerceptronClassifier(maxIter=100, layers=layers, blockSize=128, seed=1234)
     model = MLP_trainer.fit(training)
+    
+    print("ici")
     
     return model
 
@@ -29,7 +32,7 @@ if __name__ == "__main__":
     
     (rescaledData, idfModel) = training_set(sc = sc, numFeatures = numFeatures)
     model = MLP_train(training = rescaledData)
-    
+
     print("Test... \n")
 
 #    rescaled_test_df = test_set(sc, numFeatures = numFeatures, idfModel = idfModel)
