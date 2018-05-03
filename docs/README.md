@@ -60,8 +60,7 @@ Shell command line: <br />
 
 ### To execute ...
 
-For each method in /learning :
-  > `./nom_fichier`
+Execute each method one by one ...
 
 ## Authors
 
