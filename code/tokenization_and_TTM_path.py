@@ -1,3 +1,6 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
 from nltk import word_tokenize
 from scipy.sparse import csr_matrix
 from operator import itemgetter
