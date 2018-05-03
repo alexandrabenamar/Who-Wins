@@ -18,29 +18,30 @@ Using Twitter API for opinion mining and sentiment analysis.
 
 #### How to install
 
-With pip :
+With pip : <br />
   > `pip3 install <library>`
   
-With homebrew :
-  >  `brew install <library>`
+With homebrew : <br />
+  > `brew install <library>`
 
-With Anaconda :
+With Anaconda : <br />
   > `conda install <library>`
 
 ##### Polyglot
 
-Shell command line:
+Shell command line: <br />
   > `sudo apt-get install python-numpy libicu-dev`
 
 ### Dataset
 
-- Algorithm used for collecting the data :
+- Algorithm used for collecting the data : <br />
   https://github.com/Jefferson-Henrique/GetOldTweets-python
   
 - Download the dataset :
-      -> directly from the website : https://www.kaggle.com/natmonkey/brexit-data-project-bdd/data
-      -> with the shell command line :
-        > `kaggle datasets download -d natmonkey/brexit-data-project-bdd`
+      - directly from the website : <br />
+        https://www.kaggle.com/natmonkey/brexit-data-project-bdd/data <br />
+      - with the shell command line : <br />
+        `kaggle datasets download -d natmonkey/brexit-data-project-bdd`
 
 - Data cleansing (csv file format):
   > `cat fichier | sort | uniq`
