@@ -58,6 +58,11 @@ Shell command line: <br />
 - Decision Tree
 - Neural Network
 
+### To execute ...
+
+For each method in /learning :
+  > `./nom_fichier`
+
 ## Authors
 
 Mira Ait Saada, Alexandra Benamar, Cristel Dos Santos Catarino, Joel Oscar Dossa
