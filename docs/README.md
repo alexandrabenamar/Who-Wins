@@ -2,6 +2,11 @@
 
 Using Twitter API for opinion mining and sentiment analysis.
 
+## Implementation
+
+Language version : Python 3.6
+Operating System : Ubuntu 16.04, Windows 10 and MacOS High Sierra.
+
 ## Getting Started
 
 ### Libraries
