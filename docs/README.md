@@ -53,10 +53,13 @@ Shell command line: <br />
   
 ## Machine Learning
 
+The machine learning methods implemented are :
+
 - Naive Bayes
 - Logistic Regression
 - Decision Tree
-- Neural Network
+- Multi-Layer Perceptron
+- Support Vector Machine
 
 ### To execute ...
 
