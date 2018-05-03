@@ -22,8 +22,10 @@ With pip :
   > `pip3 install <library>`
   
 With homebrew :
-  > `brew update`
-  > `brew install <library>`
+  >  `brew install <library>`
+
+With Anaconda :
+  > `conda install <library>`
 
 ##### Polyglot
 
@@ -32,11 +34,9 @@ Shell command line:
 
 ### Dataset
 
-- Download the dataset with Twitter API
+-  Download the dataset using https://github.com/Jefferson-Henrique/GetOldTweets-python
 
-- Get older tweet with this algorithm: https://github.com/Jefferson-Henrique/GetOldTweets-python
-
-- Data cleansing (.csv format):
+- Data cleansing (csv file format):
   > `cat fichier | sort | uniq`
   
 ## Machine Learning
