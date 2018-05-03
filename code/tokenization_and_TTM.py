@@ -1,10 +1,5 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""
-Created on Sat Feb 24 00:06:30 2018
-
-@author: mira
-"""
 
 from nltk import word_tokenize
 from scipy.sparse import csr_matrix
