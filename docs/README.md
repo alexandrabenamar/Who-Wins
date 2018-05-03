@@ -37,13 +37,13 @@ Shell command line: <br />
 - Algorithm used for collecting the data : <br />
   https://github.com/Jefferson-Henrique/GetOldTweets-python
   
-- Download the dataset :
+- Download the dataset : <br />
       - directly from the website : <br />
         https://www.kaggle.com/natmonkey/brexit-data-project-bdd/data <br />
       - with the shell command line : <br />
-        `kaggle datasets download -d natmonkey/brexit-data-project-bdd`
+        `kaggle datasets download -d natmonkey/brexit-data-project-bdd` <br />
 
-- Data cleansing (csv file format):
+- Data cleansing (csv file format): <br />
   > `cat fichier | sort | uniq`
   
 ## Machine Learning
