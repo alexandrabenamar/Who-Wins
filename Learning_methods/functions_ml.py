@@ -92,7 +92,6 @@ def model_predict(model, test_df):
             normalized tweet-term format test set
         Output :
             prediction couple : (number of positive tweets , number of negative tweets)
-        
     """
     
     predictions = model.transform(test_df)

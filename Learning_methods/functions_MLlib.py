@@ -69,8 +69,7 @@ def test_set(sc,
             number of retained features in the tweet-term structure
             IDF model obtained in the training phase
         Output :
-            normalized tweet-term format test set
-            
+            normalized tweet-term format test set 
     """
     
     test_text = sc.textFile(test_file)
@@ -88,7 +87,6 @@ def mode_predict(model, test_set):
             normalized tweet-term format test set
         Output :
             prediction couple : (number of positive tweets , number of negative tweets)
-        
     """
     
     predictions = model.predict(test_set)
@@ -134,10 +132,7 @@ def brexit_labeled_data(sc, model, numFeatures, idf):
     
     tf_test_brexit = HashingTF(numFeatures=numFeatures).transform(test_text_brexit.map(lambda x : x))
     
-    tfidf_test_brexit = idf.transform(tf_test_brexit)    
-        
-#    SparkSession.builder.getOrCreate()
-#    SparkSession(sc)
+    tfidf_test_brexit = idf.transform(tf_test_brexit)
     
     labeled_prediction = test_labels_brexit.zip(model.predict(tfidf_test_brexit)).map(lambda x: (int(x[0]), int(x[1])))
     df = labeled_prediction.toDF(["label", "prediction"])
