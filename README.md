@@ -34,6 +34,8 @@ Shell command line:
 
 - Download the dataset with Twitter API
 
+- Get older tweet with this algorithm: https://github.com/Jefferson-Henrique/GetOldTweets-python
+
 - Data cleansing (.csv format):
   > `cat fichier | sort | uniq`
   
