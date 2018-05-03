@@ -1,10 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""
-Created on Tue Apr 24 23:41:07 2018
 
-@author: mira
-"""
 
 from pyspark.ml.classification import MultilayerPerceptronClassifier
 from functions_ml import spark_context, training_set, test_set, write_result, brexit_labeled_data, model_predict

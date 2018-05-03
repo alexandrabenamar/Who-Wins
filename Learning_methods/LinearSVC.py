@@ -1,10 +1,5 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""
-Created on Tue Apr 25 00:01:22 2018
-
-@author: mira
-"""
 
 from pyspark.ml.classification import LinearSVC
 from functions_ml import spark_context, training_set, test_set, write_result, brexit_labeled_data, model_predict
