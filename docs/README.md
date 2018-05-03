@@ -60,7 +60,7 @@ Shell command line: <br />
 
 ### To execute ...
 
-Execute each method one by one ...
+Execute the wanted method in the /learning repository.
 
 ## Authors
 
