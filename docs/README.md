@@ -4,7 +4,7 @@ Using Twitter API for opinion mining and sentiment analysis.
 
 ## Getting Started
 
-#### Libraries
+### Libraries
 
 - pyspark : Apache Spark Library for Python (used for Machine Learning Algorithms)
   http://spark.apache.org/docs/2.2.0/api/python/index.html
@@ -27,12 +27,12 @@ With homebrew : <br />
 With Anaconda : <br />
   > `conda install <library>`
 
-##### Polyglot
+##### Installing polyglot ...
 
 Shell command line: <br />
   > `sudo apt-get install python-numpy libicu-dev`
 
-### Dataset
+## Dataset
 
 - Algorithm used for collecting the data : <br />
   https://github.com/Jefferson-Henrique/GetOldTweets-python
