@@ -44,7 +44,7 @@ Shell command line: <br />
   
 - Download the dataset : <br />
       - directly from the website : <br />
-        https://www.kaggle.com/natmonkey/brexit-data-project-bdd/data <br />
+           https://www.kaggle.com/natmonkey/brexit-data-project-bdd/data <br />
       - with the shell command line : <br />
         `kaggle datasets download -d natmonkey/brexit-data-project-bdd` <br />
 
