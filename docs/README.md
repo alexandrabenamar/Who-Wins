@@ -24,18 +24,26 @@ Operating System : Ubuntu 16.04, Windows 10 and MacOS High Sierra.
 #### How to install
 
 With pip : <br />
-  > `pip3 install <library>`
+```
+sudo pip install --upgrade <library>
+```
   
 With homebrew : <br />
-  > `brew install <library>`
+```
+brew install <library>
+```
 
 With Anaconda : <br />
-  > `conda install <library>`
+```
+conda install <library>
+```
 
 ##### Installing polyglot ...
 
 Shell command line: <br />
-  > `sudo apt-get install python-numpy libicu-dev`
+```
+sudo apt-get install python-numpy libicu-dev
+```
 
 ## Dataset
 
@@ -46,10 +54,14 @@ Shell command line: <br />
       - directly from the website : <br />
            https://www.kaggle.com/natmonkey/brexit-data-project-bdd/data <br />
       - with the shell command line : <br />
-        `kaggle datasets download -d natmonkey/brexit-data-project-bdd` <br />
+      ```
+      kaggle datasets download -d natmonkey/brexit-data-project-bdd
+      ```
 
 - Data cleansing (csv file format): <br />
-  > `cat fichier | sort | uniq`
+```
+cat fichier | sort | uniq
+```
   
 ## Machine Learning
 
