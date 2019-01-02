@@ -1,6 +1,6 @@
 # Who Wins
 
-Using Twitter API for opinion mining and sentiment analysis to predict the Brexit.
+Using Twitter API for opinion mining and sentiment analysis to predict Brexit results.
 
 ## Implementation
 
